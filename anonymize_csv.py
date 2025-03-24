@@ -227,7 +227,7 @@ with open(input_csv_path, 'r', newline='', encoding='latin-1') as infile, \
 
     for row in reader:
         anonymized_row = list(row) # Convert to list to allow modification
-
+        print(f"row number {reader.line_num}")
         # Anonymize all columns in each row
         for col_index in range(len(anonymized_row)):
             cell_value = anonymized_row[col_index]
